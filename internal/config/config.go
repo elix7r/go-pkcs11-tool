@@ -9,7 +9,7 @@ import (
 )
 
 type Config struct {
-	Module    string
+	Module   string
 	SlotID   uint
 	UserPin  string
 	KeyLabel string
@@ -19,7 +19,7 @@ type Config struct {
 
 func GetConfig() (config Config) {
 	random_id, _ := pkg.RandomKeyID()
-	config = Config{"/usr/lib/softhsm/libsofthsm.so", //module
+	config = Config{"/usr/lib/softhsm/libsofthsm2.so", //module
 		0,                     //slot_id
 		"1234",                //user_pin
 		"pkcs11keypair_label", //key_label
